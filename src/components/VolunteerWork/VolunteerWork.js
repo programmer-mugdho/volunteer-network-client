@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 const VolunteerWork = ({ work }) => {
     const history = useHistory()
     const handleClick = (title) => {
-        history.push(title)
+        history.push(`/register/${title}`)
     }
     return (
         <div onClick={() => handleClick(work.title)}>
