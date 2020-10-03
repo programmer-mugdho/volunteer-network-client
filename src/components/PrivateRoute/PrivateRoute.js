@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Redirect, Route } from 'react-router-dom';
+import { UserContext } from '../../App';
 
 const PrivateRoute = ({ children, ...rest }) => {
+    const [user, setUser] = useContext(UserContext)
+    
     return (
         <Route
             {...rest}
             render={({ location }) =>
-                fakeAuth.isAuthenticated ? (
+                user.email ? (
                     children
                 ) : (
                         <Redirect

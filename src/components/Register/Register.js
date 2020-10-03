@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import './Register.css'
+import { UserContext } from '../../App';
 
 const Register = () => {
     const { title } = useParams()
+    const [user, setUser] = useContext(UserContext)
     const [work, setWork] = useState({})
     const { register, handleSubmit, errors } = useForm()
     const history = useHistory()
@@ -15,7 +17,10 @@ const Register = () => {
     }, [])
 
     const onSubmit = data => {
-        console.log(data)
+        const { title, img } = work;
+        const workName = work.name
+        data = { ...data, workName, title, img }
+        // console.log(data)
         fetch('http://localhost:5000/register', {
             method: 'POST',
             headers: {
@@ -26,7 +31,7 @@ const Register = () => {
             .then(res => res.json())
             .then(response => {
                 console.log(response)
-                if (response.insertedCount>0){
+                if (response.insertedCount > 0) {
                     history.push('/events')
                 }
             })
@@ -35,9 +40,9 @@ const Register = () => {
     return (
         <div>
             <form className="registerForm" onSubmit={handleSubmit(onSubmit)}>
-                <input ref={register({ required: true })} type="text" name="fullName" id="" />
+                <input ref={register({ required: true })} value={user.name} type="text" name="fullName" id="" />
                 {errors.fullName && <p>Full name is required</p>}
-                <input ref={register({ required: true })} type="email" name="email" id="" />
+                <input ref={register({ required: true })} value={user.email} type="email" name="email" id="" />
                 {errors.email && <p>Email is required</p>}
                 <input ref={register({ required: true })} type="date" name="date" id="" />
                 {errors.date && <p>Date is required</p>}
