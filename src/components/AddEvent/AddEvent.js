@@ -23,7 +23,7 @@ const AddEvent = () => {
         <div style={{ height: '305px' }} className='registerList__container row'>
             <div className="col-md-6">
                 <p>Event Title</p>
-                <input onChange={e => setInput(e.target.value)} className='form-control' placeholder='Enter Title' type="text" />
+                <input onChange={e => setInput(e.target.value)} className='form-control' placeholder='Enter Title' type="text" required />
                 <p style={{ marginTop: '20px' }}>Description</p>
                 <textarea rows='3' placeholder="Enter Description" style={{ height: '120px' }} className='form-control' type="text" />
             </div>

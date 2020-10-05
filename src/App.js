@@ -9,6 +9,7 @@ import Admin from './components/Admin/Admin';
 import EventTasks from './components/EventTasks/EventTasks';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import NotFound from './components/NotFound/NotFound';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Register from './components/Register/Register';
 
@@ -32,14 +33,11 @@ function App() {
           <PrivateRoute path='/events'>
             <EventTasks />
           </PrivateRoute>
-          {/* <Route path="/register/:title">
-            <Register />
-          </Route>
-          <Route path='/events'>
-            <EventTasks />
-          </Route> */}
           <Route path='/admin'>
             <Admin />
+          </Route>
+          <Route path='*'>
+            <NotFound />
           </Route>
         </Switch>
       </Router>
