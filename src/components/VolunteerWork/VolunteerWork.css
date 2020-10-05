@@ -3,6 +3,7 @@
     width: 260px;
     margin-bottom: 25px;
     position: relative;
+    cursor: pointer;
 }
 
 .work__card img {
