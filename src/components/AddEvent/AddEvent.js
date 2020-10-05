@@ -3,7 +3,6 @@ import './AddEvent.css'
 
 const AddEvent = () => {
     const [input, setInput] = useState('')
-    console.log(input)
     const handleClick = () => {
         fetch('https://volunteer-network-server.herokuapp.com/addEvent', {
             method: 'POST',

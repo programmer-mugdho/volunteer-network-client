@@ -18,14 +18,11 @@ const Login = () => {
     const location = useLocation()
     const { from } = location.state || { from: { pathname: '/' } }
 
-    console.log(user);
-
     const handleClick = () => {
         firebase.auth().signInWithPopup(provider)
             .then(result => {
                 var token = result.credential.accessToken;
                 var user = result.user;
-                // console.log(user)
                 setUser({ name: user.displayName, email: user.email })
                 history.replace(from)
             })

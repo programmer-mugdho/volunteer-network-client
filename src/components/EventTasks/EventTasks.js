@@ -23,7 +23,6 @@ const EventTasks = () => {
             .then(data => {
                 if (data.deletedCount) {
                     setEvents(selectedEvent);
-                    console.log(data)
                 }
             })
     }

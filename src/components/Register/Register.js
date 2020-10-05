@@ -28,7 +28,6 @@ const Register = () => {
         const { title, img } = work;
         const workName = work.name
         data = { ...data, workName, title, img }
-        // console.log(data)
         fetch('https://volunteer-network-server.herokuapp.com/register', {
             method: 'POST',
             headers: {
@@ -38,7 +37,6 @@ const Register = () => {
         })
             .then(res => res.json())
             .then(response => {
-                console.log(response)
                 if (response.insertedCount > 0) {
                     history.push('/events')
                 }
@@ -62,7 +60,6 @@ const Register = () => {
                             {errors.fullName && <p>Full name is required</p>}
                             <TextField inputRef={register({ required: true })} value={user.email} type="email" name="email" id="" required />
                             {errors.email && <p>Email is required</p>}
-                            {/* <TextField inputRef={register({ required: true })} type="date" name="date" id="" required/> */}
                             <KeyboardDatePicker
                                 style={{
                                     width: '460px',
