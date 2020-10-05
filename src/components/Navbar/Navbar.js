@@ -22,7 +22,7 @@ const Navbar = () => {
                         <li className="nav-item active">
                             <a className="nav-link" href="#">Donation</a>
                         </li>
-                        <li className="nav-item active">
+                        <li onClick={()=>history.push('/events')} className="nav-item active">
                             <a className="nav-link" href="#">Events</a>
                         </li>
                         <li className="nav-item active">
