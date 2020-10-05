@@ -1,0 +1,31 @@
+.work__card {
+    height: 310px;
+    width: 260px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.work__card img {
+    height: 100%;
+}
+
+.card-bottom-box {
+    position: absolute;
+    height: 70px;
+    width: 260px;
+    background: #FFBD3E;
+    border-radius: 0px 0px 10px 10px;
+    bottom: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-bottom-box p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 10px;
+    text-align: center;
+}

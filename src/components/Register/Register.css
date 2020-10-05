@@ -1,3 +1,33 @@
-.registerForm p{
-    color:red;
+.registerForm p {
+    color: red;
+}
+
+.register__container {
+    background: #FFFFFF;
+    border: 1px solid #ABABAB;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 570px;
+    height: 591px;
+    margin: auto;
+}
+
+.register__inner-container {
+    margin: 36px 54px;
+}
+
+.registerForm input {
+    width: 460px;
+    margin-top: 20px;
+    height: 37px;
+}
+
+.submit-button {
+    padding: 14px 181px;
+    width: 460px;
+    height: 48px;
+    background: #3F90FC;
+    color: white;
+    border: none;
+    margin-top:30px;
 }

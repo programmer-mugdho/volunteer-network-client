@@ -1,0 +1,16 @@
+.navbar-brand img {
+    width: 202px;
+}
+
+.nav-item .btn {
+    width: 150px;
+    color: white !important;
+}
+
+.nav-item {
+    margin-left: 10px;
+}
+
+nav {
+    padding: 10px 0px;
+}

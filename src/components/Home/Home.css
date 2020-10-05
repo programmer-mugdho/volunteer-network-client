@@ -1,0 +1,47 @@
+.top-banner {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('../../images/topbanner.png');
+    background-repeat: no-repeat;
+    background-color: #F8FAFC;
+}
+
+.home__title {
+    font-weight: bold;
+    margin-top: 50px;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.home__form {
+    display: flex;
+    justify-content: center;
+}
+
+.home__form form {
+    margin-top: 20px;
+    width: 470px;
+    height: 50px;
+    position: relative;
+}
+
+.home__form form input {
+    float: left;
+    text-align: center;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.home__form form button {
+    position: absolute;
+    right: 0px;
+    height: 50px;
+    border-radius: 8px;
+    width: 110px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.home__works {
+    margin-top: 50px;
+}

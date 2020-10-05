@@ -1,0 +1,25 @@
+.registerList__container {
+    background: #FFFFFF;
+    border-radius: 20px;
+    height: 550px;
+    width:1080px;
+    margin: 0 30px;
+    padding-top: 21px;
+}
+.list-header{
+    display: flex;
+    height: 54px;
+    width:1040px;
+    margin:0px 20px;
+    background-color: #f5f6fa;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 13px;
+}
+.list-header span{
+    padding:10px;
+}
+.registerList__container li{
+    list-style: none;
+    padding: 10px 0px;
+}

@@ -1,0 +1,29 @@
+aside {
+    /* border: 1px solid #ABABAB; */
+    padding-left: 45px !important;
+    background-color: white;
+}
+
+.topBar {
+    height: 70px;
+    padding-left: 20px;
+}
+
+.admin__body {
+    padding-top: 30px;
+    padding-bottom:30px;
+    background-color: #F4F7FC;
+    /* height: 90vh; */
+}
+
+.col-md-10 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.col-md-2 p {
+    font-size: 16px;
+    line-height: 19px;
+    color: #207FEE;
+    cursor: pointer;
+}
